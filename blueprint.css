@@ -1,0 +1,362 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald|Roboto:400);
+
+
+html {
+  margin: .5em 20%;
+  color: #0a0a0a;
+}
+
+header {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+}
+
+header h1 {
+  font-size: 2em;
+  border-bottom: .2em solid;
+}
+
+header p {
+  font-size: 1.3em;
+  margin-bottom: 0.2em;
+}
+
+
+
+.content.headline {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.centered {
+  width: 50%;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4em;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.deck {
+  width: 80%;
+  margin: 0 auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.6em;
+}
+
+
+.title::after {
+  display: block;
+  margin: .75em auto;
+  width: 100px;
+  content: "";
+  border-bottom: 6px solid hsl(160, 100%, 70%);
+}
+
+.deck::after {
+  display: block;
+  margin-top: 2em;
+  text-align: center;
+  content: "&";
+}
+
+
+/*Service Blueprint*/
+
+
+.comparison {
+  width:100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  font: 13px/1.4;
+  text-align: center;
+  padding: 10px;
+}
+
+.comparison table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: auto;
+}
+
+.comparison td,
+.comparison th {
+  border-right: 1px solid #E8E8E8;
+  empty-cells: show;
+  padding: 5px;
+  border-top: 1px solid #E8E8E8;
+  border-bottom: 1px solid #E8E8E8;
+  color: #808080;
+  font-size: 12px;
+}
+
+.comparison tbody tr:nth-child(odd) {
+  display: none;
+}
+
+.comparison .compare-row {
+  background: #F7F7F7;
+}
+
+.fa-check {
+  color: #2A6049;
+}
+
+.comparison th {
+  font-weight: normal;
+  padding: 0;
+  border-top: 0px solid #E8E8E8;
+  border-bottom: 0px solid #E8E8E8;
+}
+
+.comparison tr td:first-child {
+  text-align: left;
+  padding: 15px;
+  border-left: 1px solid #E8E8E8;
+  border-top: 1px solid #E8E8E8;
+}
+
+.comparison .product,
+.comparison .tl {
+  color: #FFF;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.comparison .tl2 {
+  border-right: 0;
+}
+
+.comparison .product {
+  background: #69C7F1;
+  height: 20px;
+  font-size: 1em;
+}
+
+.comparison .price-info {
+  padding: 15px;
+}
+
+.comparison .price-now,
+.comparison .price-now span {
+  color: #808080;
+}
+
+.comparison .price-now span {
+  font-size: 14px;
+  color: #545454;
+}
+
+.comparison .price-now p {
+  font-size: 10px;
+  text-align: center;
+  line-height: 16px;
+  display: inline;
+}
+
+.comparison .price-buy {
+  background: #FFE2D3;
+  padding: 10px 20px;
+  font-size: 12px;
+  display: inline-block;
+  color: #140C07;
+  height:130px;
+  width: 120px;
+  text-decoration: none;
+  border-radius: 3px;
+  margin: 5px 0 10px 0;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+/*.comparison .price-buy:hover {
+  background: #E84D00;
+}
+*/
+
+
+@media screen and (min-width: 721px) and (max-width: 1000px) {
+  .table_ul li {
+    letter-spacing: 0px;
+  }
+
+  .comparison .price-now span {
+    font-size: 24px;
+  }
+
+  .comparison .price-now p {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .table_ul {
+    padding: 0px;
+  }
+
+  .table_ul li {
+    font-size: 10px;
+    line-height: 16px;
+    padding: 3px 0;
+  }
+
+  .comparison {
+    max-width: 100%;
+  }
+
+  .comparison td:first-child,
+  .comparison th:first-child {
+    display: none;
+  }
+
+  .comparison tbody tr:nth-child(odd) {
+    display: table-row;
+    background: #F7F7F7;
+  }
+
+  .comparison .row {
+    background: #FFF;
+  }
+
+  .comparison td,
+  .comparison th {
+    border: 1px solid #CCC;
+    border-top: none;
+    padding: 10px;
+  }
+
+  .price-info {
+    border-top: 0 !important;
+    padding: 10px 0 !important;
+  }
+
+
+
+  .comparison .compare-row {
+    background: #ffffff;
+  }
+
+  .comparison .price-now p {
+    display: block;
+  }
+
+  .comparison .price-now span {
+    font-size: 24px;
+  }
+
+  .comparison .qbse {
+    font-size: 1.2em;
+  }
+
+  .comparison td {
+    font-size: 14px;
+  }
+
+  .comparison th {
+    font-size: 14px;
+  }
+}
+
+
+
+.gap:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding-bottom: 100px;
+}
+
+
+@media (hover: hover) {
+  html.overflow body {
+    padding-right: 17px;
+ }
+}
+
+.cursor {
+  position: fixed;
+  width: 2rem;
+  height: 2rem;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  display: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+}
+@media (hover: hover) {
+  .cursor {
+    display: block;
+ }
+}
+.cursor:before, .cursor:after {
+  content: '';
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1rem;
+  height: 2px;
+  background: rgba(0, 0, 0, .78);
+}
+.cursor:before {
+  transform: rotate(45deg);
+}
+.cursor:after {
+  transform: rotate(-45deg);
+}
+.image {
+  cursor: pointer;
+  max-width: 100%;
+}
+.image.open .image-zoom {
+  display: flex;
+}
+.image + .image {
+  margin-top: 4rem;
+}
+.image > img {
+  width: 800px;
+
+  max-width: 100%;
+  vertical-align: middle;
+}
+.image .image-zoom {
+  position: fixed;
+  width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, .8);
+  cursor: none;
+}
+.image .image-zoom > img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.image {
+  width: 165vmin;
+  height: 68vmin;
+}
+.image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

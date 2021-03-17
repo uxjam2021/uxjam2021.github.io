@@ -1,0 +1,351 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald|Roboto:400);
+
+/*$lightgreen: #BACAC2;
+$green: #2A6049;
+$orange: #EC744A;
+$blush: #FFE2D3;
+$purple: #655EB0;
+$lightpurple: #D2D0E8;
+$yellow: #E0A136;
+$lightyellow: #FDEDD0;
+$darkgray: #BFC0C0;*/
+
+
+
+html {
+  margin: .5em 20%;
+  color: #0a0a0a;
+}
+
+header {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+}
+
+header h1 {
+  font-size: 2em;
+  border-bottom: .2em solid;
+}
+
+header p {
+  font-size: 1.3em;
+  margin-bottom: 0.2em;
+}
+
+
+
+.content.headline {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.centered {
+  width: 50%;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4em;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.deck {
+  width: 80%;
+  margin: 0 auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.6em;
+}
+
+/*.deck p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin: 0 auto;
+  font-family: 'Gentium Basic', serif;
+  font-size: 1em;
+}*/
+
+.title::after {
+  display: block;
+  margin: .75em auto;
+  width: 100px;
+  content: "";
+  border-bottom: 6px solid hsl(160, 100%, 70%);
+}
+
+.deck::after {
+  display: block;
+  margin-top: 2em;
+  text-align: center;
+  content: "&";
+}
+
+/*Interactive Map*/
+.bars {
+  background-color: blue;
+  height: 25px;
+  margin: 10px 0 0 0;
+  -webkit-transition: width 1s ease-in;
+  -moz-transition: width 1s ease-in;
+  -o-transition: width 1s ease-in;
+  transition: width 1s ease-in;
+}
+
+#bar0 {
+  position: relative;
+}
+
+#bar1 {
+  position: relative;
+}
+
+#bar2 {
+  position: relative;
+}
+
+
+
+.number {
+  color: white;
+  text-align: right;
+  padding: 3px;
+  font-size: 12px;
+}
+
+#cat {
+  padding-top: 5px;
+}
+
+#main {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  overflow: auto;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.tooltip {
+  display: none;
+  background: beige;
+  font-size: 14px;
+  height: 25px;
+  border-radius: 5px;
+  padding-top: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 0px;
+  color: black;
+  border: 1px solid black;
+}
+
+.moreInfo {
+  text-align: center;
+}
+
+.extra {
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  vertical-align: middle;
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 20px 0;
+  padding: 15px 0;
+  border: 3px solid #343436;
+  border-radius: 2px;
+}
+
+#team {
+  border: 3px solid #343436;
+}
+
+#export,
+#datachange {
+  cursor: pointer;
+  background-color: #343436;
+}
+
+#export:hover,
+#datachange:hover {
+  background-color: #4d4d50;
+}
+
+/*Google Chart*/
+.main_chart {
+  width: 500px;
+  margin: 10px auto;
+  padding: 10px 20px 30px;
+  background: #FFF;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+#bar-chart {
+  width: 500px;
+  height: 300px;
+  position: relative;
+}
+
+#line-chart {
+  width: 500px;
+  height: 300px;
+  position: relative;
+}
+
+#bar-chart::before, #line-chart::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 240px;
+  height: 30px;
+  left: 155px;
+  top: 254px;
+  background: #FAFAFA;
+  box-shadow: 1px 1px 0 0 #DDD;
+}
+
+#pie-chart {
+  width: 500px;
+  height: 250px;
+  position: relative;
+}
+
+#pie-chart::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 115px;
+  left: 315px;
+  top: 0;
+  background: #FAFAFA;
+  box-shadow: 1px 1px 0 0 #DDD;
+}
+
+#pie-chart::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 260px;
+  left: 70px;
+  width: 170px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  box-shadow: 0 0 3px 4px rgba(0, 0, 0, 0.1);
+}
+
+.price-table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.price-card {
+  flex: 1;
+  max-width: 360px;
+  margin: 20px 10px;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  color: #140C07;
+}
+
+.price-card-one-header {
+  background: red;
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.price-card-two-header {
+  background: #BACAC2;
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.price-card-three-header {
+  background: #F8C060;
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.price-card-four-header {
+  background: salmon;
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.price-card-five-header {
+  background: #FFE2D3;
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.price-card-six-header {
+  background: #D2D0E8;
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.price-card-seven-header {
+  background: #FDEDD0;
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.price-card-eight-header {
+  background: #EC744A;
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.price-card-nine-header {
+  background: #2A6049;
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.price {
+  font-size: 12px;
+  margin: 10px 0;
+  color: #140C07;
+  font-family: "Oswald";
+}
+
+.price-card li {
+  font-size: 16px;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width:1100px) {
+  .price-card {
+    flex: 50%;
+  }
+}

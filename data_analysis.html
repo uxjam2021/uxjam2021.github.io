@@ -1,0 +1,254 @@
+<head>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="data_analysis.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+</head>
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+<link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic' rel='stylesheet' type='text/css'>
+<div class="hold">
+  <div class="header">
+    <div class="container">
+      <div id="logo"><img src="image/logo.png"></img>
+      </div>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="toolkit.html">Toolkit</a></li>
+        <li><a href="demo.html">Demo</a></li>
+        <li><a href="about_us.html">About Us | FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="content headline">
+  <div class="centered">
+    <h1 class="title">Data Analysis</h1>
+    <div class="deck">
+      <p>Visualize Data on Covid Vaccine Uptake by City in LA County</p>
+    </div>
+  </div>
+</div>
+
+<header>
+  <h1>Who got the vaccine?</h1>
+  <p>By Ethnic Groups | <time datetime="2013-14-11">Updated on 02/20/2021</time></p>
+</header>
+
+<div class="price-table">
+  <div class="price-card one">
+    <h3 class="price-card-one-header"></h3>
+    <div class="price"><sup></sup>American Indian/Alaska Native<span></span></div>
+
+
+  </div>
+
+
+  <div class="price-card two">
+    <h3 class="price-card-two-header"></h3>
+    <div class="price"><sup></sup>Asian<span></span></div>
+
+
+  </div>
+
+  <div class="price-card three">
+    <h3 class="price-card-three-header"></h3>
+    <div class="price"><sup></sup>Black/African American<span></span></div>
+  </div>
+
+  <div class="price-card four">
+    <h3 class="price-card-four-header"></h3>
+    <div class="price"><sup></sup>Native Hawaiian/Pacific Islander<span></span></div>
+  </div>
+  <div class="price-card five">
+    <h3 class="price-card-five-header"></h3>
+    <div class="price"><sup></sup>Latinx<span></span></div>
+  </div>
+
+  <div class="price-card six">
+    <h3 class="price-card-six-header"></h3>
+    <div class="price"><sup></sup>White<span></span></div>
+  </div>
+  <div class="price-card seven">
+    <h3 class="price-card-seven-header"></h3>
+    <div class="price"><sup></sup>Other<span></span></div>
+  </div>
+
+  <div class="price-card eight">
+    <h3 class="price-card-eight-header"></h3>
+    <div class="price"><sup></sup>Multi-Race<span></span></div>
+  </div>
+
+  <div class="price-card nine">
+    <h3 class="price-card-nine-header"></h3>
+    <div class="price"><sup></sup>Unknown<span></span></div>
+  </div>
+</div>
+
+<canvas id="countries" width="600" height="400"></canvas>
+<P>* Data Source:http://publichealth.lacounty.gov/media/coronavirus/vaccine/vaccine-dashboard.htm</p>
+<header>
+  <h1>How long it will take to cover 90% of LA county's population?</h1>
+  <p>Based on Daily Dose Increase | <time datetime="2013-14-11">Updated on 02/25/2021</time></p>
+</header>
+<canvas id="buyers" width="600" height="400"></canvas>
+<p>* X:Percentage of increase of doses adminsitered per day. Y: Days it will take to cover 90% of population to achieve herd immunity.</p>
+<p>* Formula: Days to Cover 90% Population for at least 1st Dose= [Total Population in LA County (10 mil)-People received at least one dose(1250570)]/Daily Dose(Daily Dose=Total Doses Administered(1958547)/Days(74))</p>
+<P>* Data Source:http://publichealth.lacounty.gov/media/coronavirus/vaccine/vaccine-dashboard.htm</p>
+<header>
+  <h1>What is the trend of vaccine administration in LA county?</h1>
+  <p>Doses Administered Since Dec 14th | <time datetime="2013-14-11">Updated on 02/20/2021</time></p>
+</header>
+<canvas id="trend" width="600" height="400"></canvas>
+<P>* Data Source:http://publichealth.lacounty.gov/media/coronavirus/vaccine/vaccine-dashboard.htm</p>
+<header>
+  <h1>How many of age over 50 residents received at least one dose?</h1>
+  <p>Percentage Among All Age 50+ Residents | <time datetime="2013-14-11">Updated on 02/20/2021</time></p>
+</header>
+<div class="price-table">
+  <div class="price-card two">
+    <h3 class="price-card-two-header"></h3>
+    <div class="price"><sup></sup>All 50+ residents in LA county<span></span></div>
+  </div>
+
+  <div class="price-card nine">
+    <h3 class="price-card-nine-header"></h3>
+    <div class="price"><sup></sup>50+ received at least one dose <span></span></div>
+  </div>
+</div>
+
+<canvas id="age" width="600" height="400"></canvas>
+<P>* Data Source:http://publichealth.lacounty.gov/media/coronavirus/vaccine/vaccine-dashboard.htm</p>
+
+
+<!-- pie chart canvas element -->
+<!--<header>
+  <h1>Who get the vaccine?</h1>
+  <p>By Ethic Groups <time datetime="2013-14-11">Updated on 02/20/2021</time></p>
+</header>
+
+<!-- bar chart canvas element -->
+<!-- <canvas id="income" width="600" height="400"></canvas>  -->
+
+
+
+<script>
+  // line chart data
+  var trendData = {
+    labels: ["14-Dec", "21-Dec", "28-Dec", "4-Jan", "11-Jan", "18-Jan", "1-Feb", "8-Feb", "15-Feb"],
+
+
+    datasets: [{
+      fillColor: "rgba(172,194,132,0.4)",
+      strokeColor: "#ACC26D",
+      pointColor: "#fff",
+      pointStrokeColor: "#9DB86D",
+      data: [63566, 114522, 217831, 344563, 441430, 719138, 1051229, 1345949, 1676900]
+    }]
+  }
+  // get second line chart canvas
+  var trend = document.getElementById('trend').getContext('2d');
+  // draw line chart
+  new Chart(trend).Line(trendData);
+
+  // line chart data
+  // line chart data
+  var buyerData = {
+      labels : ["Current Speed","50% Up",	"100% Up",	"150% Up",	"200% Up","250% Up","300% Up"],
+      datasets : [
+      {
+          fillColor : "rgba(172,194,132,0.4)",
+          strokeColor : "#2A6049",
+          pointColor : "#fff",
+          pointStrokeColor : "#9DB86D",
+          data : [289,192,144,115,96,82,72]
+      }
+  ]
+
+
+  }
+  // get line chart canvas
+  var buyers = document.getElementById('buyers').getContext('2d');
+  // draw line chart
+  new Chart(buyers).Line(buyerData);
+
+  // pie chart data
+  var pieData = [{
+      value: 2497,
+      color: "red"
+
+    },
+    {
+      value: 211222,
+      color: "#BACAC2"
+    },
+    {
+      value: 57328,
+      color: "#F8C060"
+    },
+    {
+      value: 6722,
+      color: "salmon"
+    },
+
+    {
+      value: 255197,
+      color: "#FFE2D3"
+    },
+
+    {
+      value: 370382,
+      color: "#D2D0E8"
+    },
+
+    {
+      value: 143515,
+      color: "#FDEDD0"
+    },
+
+    {
+      value: 18665,
+      color: "#EC744A"
+    },
+
+    {
+      value: 40747,
+      color: "#2A6049"
+    }
+  ];
+  // pie chart options
+  var pieOptions = {
+    segmentShowStroke: false,
+    animateScale: true
+  }
+  // get pie chart canvas
+  var countries = document.getElementById("countries").getContext("2d");
+  // draw pie chart
+  new Chart(countries).Pie(pieData, pieOptions);
+
+  // pie chart data
+  var ageData = [{
+      value: 769336,
+      color: "#2A6049"
+
+    },
+    {
+      value: 3413296,
+      color: "#BACAC2"
+    }
+  ];
+  // pie chart options
+  var pieOptions = {
+    segmentShowStroke: false,
+    animateScale: true
+  }
+  // get pie chart canvas
+  var age = document.getElementById("age").getContext("2d");
+  // draw pie chart
+  new Chart(age).Pie(ageData, pieOptions);
+</script>
+
+
+<script src="data_analysis.js"></script>

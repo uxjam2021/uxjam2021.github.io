@@ -1,0 +1,15 @@
+window.onscroll = function() {
+  var el = document.getElementsByClassName('header')[0];
+  var className = 'small';
+  if (el.classList) {
+    if (window.scrollY > 10)
+      el.classList.add(className);
+    else
+      el.classList.remove(className);
+  }
+};
+
+// add items
+$( 'tbody' ).on( 'click', 'td:first-child', function() {
+    $( this ).parent().toggleClass( 'is-completed' );
+});

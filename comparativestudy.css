@@ -1,0 +1,315 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald|Roboto:400);
+
+
+
+html {
+  margin: .5em 20%;
+  color: #0a0a0a;
+}
+
+header {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+}
+
+header h1 {
+  font-size: 2em;
+  border-bottom: .2em solid;
+}
+
+header p {
+  font-size: 1.3em;
+  margin-bottom: 0.2em;
+}
+
+
+
+.content.headline {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.centered {
+  width: 50%;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4em;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.deck {
+  width: 80%;
+  margin: 0 auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.6em;
+}
+
+/*.deck p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin: 0 auto;
+  font-family: 'Gentium Basic', serif;
+  font-size: 1em;
+}*/
+
+.title::after {
+  display: block;
+  margin: .75em auto;
+  width: 100px;
+  content: "";
+  border-bottom: 6px solid hsl(160, 100%, 70%);
+}
+
+.deck::after {
+  display: block;
+  margin-top: 2em;
+  text-align: center;
+  content: "&";
+}
+
+
+/* Reset */
+ul { list-style: none; margin: 0; padding: 0;}
+
+/* Price Table */
+.price-table {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #fff;
+  align-items: center;
+  margin-bottom: 4em;
+}
+.price-table > li {
+  display: inline-block;
+  width: 140px;
+  margin: 0 10px;
+  text-align: center;
+  height:60px;
+}
+
+/* Top */
+.price-table-top {
+  position: relative;
+  height: 60px;
+  padding-top: 1px;
+}
+
+.price-table li:nth-child(1) .price-table-top {
+  background-color: #2A6049;
+}
+.price-table li:nth-child(2) .price-table-top {
+  background-color: #EC744A;
+}
+.price-table li:nth-child(3) .price-table-top {
+  background-color: #F8C060;
+}
+
+.price-table li:nth-child(4) .price-table-top {
+  background-color: #655EB0;
+}
+.price-table li:nth-child(5) .price-table-top {
+  background-color: #3483DA;
+}
+
+
+.price-table-top p {
+  position: absolute;
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  left: 50%;
+  bottom: 0;
+  margin: 0 0 -15px -15px;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.price-table-top p span {
+  font-size: 14px;
+}
+
+.price-table li:nth-child(1) .price-table-top p {
+  background-color: #194B35;
+}
+.price-table li:nth-child(2) .price-table-top p {
+  background-color: #ED5723;
+}
+.price-table li:nth-child(3) .price-table-top p {
+  background-color: #E6A12A;
+}
+
+.price-table li:nth-child(4) .price-table-top p {
+  background-color: #372DA0;
+}
+.price-table li:nth-child(5) .price-table-top p {
+  background-color: #1559A4;
+}
+
+
+/* Featured */
+.price-table-featured {
+  padding: 20px 0;
+  margin-bottom: 40px;
+
+}
+
+.price-table li:nth-child(1) .price-table-featured {
+  background-color: #BACAC2;
+}
+.price-table li:nth-child(2) .price-table-featured {
+  background-color: #FFe2D3;
+}
+.price-table li:nth-child(3) .price-table-featured {
+  background-color: #FDEDD0;
+}
+
+.price-table li:nth-child(4) .price-table-featured {
+  background-color: #D2D0E8;
+}
+.price-table li:nth-child(5) .price-table-featured {
+  background-color: #C6E1FF;
+}
+
+
+.price-table-featured li {
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: lighter;
+  color:#140C07;
+}
+
+/* sign up */
+/*<a href="" class="signup">Explore</a>*/
+.signup {
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 40px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.price-table li:nth-child(1) .signup {
+  background-color: #2A6049;
+}
+.price-table li:nth-child(2) .signup {
+  background-color: #EC744A;
+}
+.price-table li:nth-child(3) .signup {
+  background-color: #F8C060;
+}
+
+.price-table li:nth-child(4) .signup {
+  background-color: #2A6049;
+}
+.price-table li:nth-child(5) .signup {
+  background-color: #EC744A;
+}
+
+
+
+
+ html.overflow {
+	 width: 100vw;
+	 height: 100vh;
+	 overflow: hidden;
+}
+ @media (hover: hover) {
+	 html.overflow body {
+		 padding-right: 17px;
+	}
+}
+
+ .cursor {
+	 position: fixed;
+	 width: 2rem;
+	 height: 2rem;
+	 background: #fff;
+	 border-radius: 50%;
+	 z-index: 100;
+	 top: 0;
+	 left: 0;
+	 pointer-events: none;
+	 display: none;
+	 box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+}
+ @media (hover: hover) {
+	 .cursor {
+		 display: block;
+	}
+}
+ .cursor:before, .cursor:after {
+	 content: '';
+	 position: absolute;
+	 margin: auto;
+	 left: 0;
+	 right: 0;
+	 top: 0;
+	 bottom: 0;
+	 width: 1rem;
+	 height: 2px;
+	 background: rgba(0, 0, 0, .78);
+}
+ .cursor:before {
+	 transform: rotate(45deg);
+}
+ .cursor:after {
+	 transform: rotate(-45deg);
+}
+ .image {
+	 cursor: pointer;
+	 max-width: 100%;
+}
+ .image.open .image-zoom {
+	 display: flex;
+}
+ .image + .image {
+	 margin-top: 4rem;
+}
+ .image > img {
+	 width: 800px;
+
+	 max-width: 100%;
+	 vertical-align: middle;
+}
+ .image .image-zoom {
+	 position: fixed;
+	 width: 100vw;
+	 min-height: 100vh;
+	 top: 0;
+	 left: 0;
+	 display: none;
+	 justify-content: center;
+	 align-items: center;
+	 background: rgba(0, 0, 0, .8);
+	 cursor: none;
+}
+ .image .image-zoom > img {
+	 max-width: 100%;
+	 vertical-align: middle;
+}
+ .image {
+	 width: 165vmin;
+	 height: 68vmin;
+}
+ .image > img {
+	 width: 100%;
+	 height: 100%;
+	 object-fit: cover;
+	 object-position: center;
+}
